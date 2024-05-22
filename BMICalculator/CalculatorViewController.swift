@@ -15,6 +15,7 @@ class CalculatorViewController: UIViewController {
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var mainImageView: UIImageView!
     
+    @IBOutlet var nicknameTextField: UITextField!
     @IBOutlet var heightLabel: UILabel!
     @IBOutlet var heightTextField: UITextField!
     @IBOutlet var weightLabel: UILabel!
@@ -30,6 +31,9 @@ class CalculatorViewController: UIViewController {
         super.viewDidLoad()
         
         // 마지막 검색 불러오기
+        nicknameTextField.placeholder = "닉네임을 입력해주세요"
+        let nickname = UserDefaults.standard.string(forKey: "nickname")
+        nicknameTextField.text = nickname
         let height = UserDefaults.standard.string(forKey: "height")
         heightTextField.text = height
         let weight = UserDefaults.standard.string(forKey: "weight")
@@ -179,6 +183,7 @@ class CalculatorViewController: UIViewController {
         presentAlert(title: title, message: message)
         
         // 마지막 검색 영구 저장하기
+        UserDefaults.standard.setValue(nicknameTextField.text, forKey: "nickname")
         UserDefaults.standard.setValue(heightString, forKey: "height")
         UserDefaults.standard.setValue(weightString, forKey: "weight")
     }

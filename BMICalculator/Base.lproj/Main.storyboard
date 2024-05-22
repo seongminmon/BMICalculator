@@ -105,6 +105,14 @@
                                     <action selector="resultButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tig-VO-GZB"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PmR-Bm-Wqm">
+                                <rect key="frame" x="20" y="178" width="193" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="pT7-W4-Pf3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -119,6 +127,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cOE-L1-luq" secondAttribute="trailing" constant="20" id="9fX-lv-kGr"/>
                             <constraint firstItem="99e-Sl-ecc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Cu2-Zy-wbp"/>
                             <constraint firstItem="rXt-gX-NaO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Dbk-ZY-4U8"/>
+                            <constraint firstItem="LYm-VC-Adp" firstAttribute="leading" secondItem="PmR-Bm-Wqm" secondAttribute="trailing" constant="10" id="Gi7-qa-baQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LYm-VC-Adp" secondAttribute="trailing" constant="20" id="KKH-ZJ-rmk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cBX-QO-HDV" secondAttribute="trailing" constant="20" id="Q0t-NF-rEY"/>
                             <constraint firstItem="JXZ-rs-6kR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ras-ht-fZm"/>
@@ -130,6 +139,8 @@
                             <constraint firstItem="nrP-mT-6sK" firstAttribute="top" secondItem="cOE-L1-luq" secondAttribute="bottom" constant="20" id="djI-cU-N2n"/>
                             <constraint firstItem="cOE-L1-luq" firstAttribute="top" secondItem="cBX-QO-HDV" secondAttribute="bottom" constant="10" id="fgP-iw-381"/>
                             <constraint firstItem="rXt-gX-NaO" firstAttribute="top" secondItem="99e-Sl-ecc" secondAttribute="bottom" constant="10" id="h5a-R4-azl"/>
+                            <constraint firstItem="PmR-Bm-Wqm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hs3-a3-Qti"/>
+                            <constraint firstItem="99e-Sl-ecc" firstAttribute="top" secondItem="PmR-Bm-Wqm" secondAttribute="bottom" constant="20" id="khS-mN-8e5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nrP-mT-6sK" secondAttribute="trailing" constant="20" id="oMP-I7-MeE"/>
                             <constraint firstItem="LYm-VC-Adp" firstAttribute="leading" secondItem="99e-Sl-ecc" secondAttribute="trailing" id="pg3-HY-wy3"/>
                             <constraint firstItem="JXZ-rs-6kR" firstAttribute="top" secondItem="VjI-4F-8kM" secondAttribute="bottom" constant="20" id="qvr-jP-eUP"/>
@@ -149,6 +160,7 @@
                         <outlet property="heightTextField" destination="rXt-gX-NaO" id="LTT-tP-BBr"/>
                         <outlet property="hideButton" destination="9c7-O2-92t" id="uX9-LV-aeD"/>
                         <outlet property="mainImageView" destination="LYm-VC-Adp" id="WOK-a7-Moo"/>
+                        <outlet property="nicknameTextField" destination="PmR-Bm-Wqm" id="GnQ-5c-Rom"/>
                         <outlet property="randomButton" destination="cOE-L1-luq" id="PLQ-YK-Pam"/>
                         <outlet property="resultButton" destination="nrP-mT-6sK" id="uVp-aG-Zpi"/>
                         <outlet property="titleLabel" destination="VjI-4F-8kM" id="BK8-cr-AiP"/>
