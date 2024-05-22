@@ -29,6 +29,12 @@ class CalculatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 마지막 검색 불러오기
+        let height = UserDefaults.standard.string(forKey: "height")
+        heightTextField.text = height
+        let weight = UserDefaults.standard.string(forKey: "weight")
+        weightTextField.text = weight
+        
         configureUI()
     }
     
@@ -79,7 +85,7 @@ class CalculatorViewController: UIViewController {
         textField.layer.cornerRadius = 10
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.black.cgColor
-        //        textField.keyboardType = .numberPad
+        // textField.keyboardType = .numberPad
     }
     
     // MARK: - Logic
@@ -171,6 +177,10 @@ class CalculatorViewController: UIViewController {
         // 4. 얼럿 띄워서 결과 보여주기
         let (title, message) = getAlertMessage(BMI: BMI)
         presentAlert(title: title, message: message)
+        
+        // 마지막 검색 영구 저장하기
+        UserDefaults.standard.setValue(heightString, forKey: "height")
+        UserDefaults.standard.setValue(weightString, forKey: "weight")
     }
     
     @IBAction func heightTextFieldEditingChanged(_ sender: UITextField) {
