@@ -21,6 +21,7 @@ class CalculatorViewController: UIViewController {
     @IBOutlet var weightLabel: UILabel!
     @IBOutlet var weightTextField: UITextField!
     
+    @IBOutlet var resetButton: UIButton!
     @IBOutlet var hideButton: UIButton!
     @IBOutlet var randomButton: UIButton!
     @IBOutlet var resultButton: UIButton!
@@ -57,6 +58,10 @@ class CalculatorViewController: UIViewController {
         hideButton.setTitle("", for: .normal)
         hideButton.setImage(UIImage(systemName: "eye.slash"), for: .normal)
         hideButton.tintColor = .gray
+        
+        resetButton.setTitle("리셋하기", for: .normal)
+        resetButton.setTitleColor(.black, for: .normal)
+        resetButton.contentHorizontalAlignment = .leading
         
         randomButton.setTitle("랜덤으로 BMI 계산하기", for: .normal)
         randomButton.setTitleColor(.red, for: .normal)
@@ -150,6 +155,19 @@ class CalculatorViewController: UIViewController {
         // 2. weight 텍스트필드 보여주기, 가려주기
         weightTextField.isSecureTextEntry.toggle()
     }
+    
+    @IBAction func resetButtonTapped(_ sender: UIButton) {
+        // 데이터 리셋하기
+        UserDefaults.standard.setValue("", forKey: "nickname")
+        UserDefaults.standard.setValue("", forKey: "height")
+        UserDefaults.standard.setValue("", forKey: "weight")
+        
+        // 리셋 후 세팅하기
+        nicknameTextField.text = ""
+        heightTextField.text = ""
+        weightTextField.text = ""
+    }
+    
     
     @IBAction func randomButtonTapped(_ sender: UIButton) {
         // 텍스트필드 랜덤값으로 채워주기

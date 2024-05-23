@@ -113,6 +113,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sud-W2-rSn">
+                                <rect key="frame" x="20" y="439.33333333333331" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="GrE-87-CJd"/>
+                                    <constraint firstAttribute="height" constant="30" id="w8x-f2-7Bh"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2AB-C2-jGb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -125,6 +137,7 @@
                             <constraint firstItem="VjI-4F-8kM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="6PX-3M-oZU"/>
                             <constraint firstItem="VjI-4F-8kM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8nI-mt-kId"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cOE-L1-luq" secondAttribute="trailing" constant="20" id="9fX-lv-kGr"/>
+                            <constraint firstItem="Sud-W2-rSn" firstAttribute="centerY" secondItem="cOE-L1-luq" secondAttribute="centerY" id="A5g-36-QIU"/>
                             <constraint firstItem="99e-Sl-ecc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Cu2-Zy-wbp"/>
                             <constraint firstItem="rXt-gX-NaO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Dbk-ZY-4U8"/>
                             <constraint firstItem="LYm-VC-Adp" firstAttribute="leading" secondItem="PmR-Bm-Wqm" secondAttribute="trailing" constant="10" id="Gi7-qa-baQ"/>
@@ -139,6 +152,7 @@
                             <constraint firstItem="nrP-mT-6sK" firstAttribute="top" secondItem="cOE-L1-luq" secondAttribute="bottom" constant="20" id="djI-cU-N2n"/>
                             <constraint firstItem="cOE-L1-luq" firstAttribute="top" secondItem="cBX-QO-HDV" secondAttribute="bottom" constant="10" id="fgP-iw-381"/>
                             <constraint firstItem="rXt-gX-NaO" firstAttribute="top" secondItem="99e-Sl-ecc" secondAttribute="bottom" constant="10" id="h5a-R4-azl"/>
+                            <constraint firstItem="Sud-W2-rSn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="h7v-z0-yqG"/>
                             <constraint firstItem="PmR-Bm-Wqm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hs3-a3-Qti"/>
                             <constraint firstItem="99e-Sl-ecc" firstAttribute="top" secondItem="PmR-Bm-Wqm" secondAttribute="bottom" constant="20" id="khS-mN-8e5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nrP-mT-6sK" secondAttribute="trailing" constant="20" id="oMP-I7-MeE"/>
@@ -162,6 +176,7 @@
                         <outlet property="mainImageView" destination="LYm-VC-Adp" id="WOK-a7-Moo"/>
                         <outlet property="nicknameTextField" destination="PmR-Bm-Wqm" id="GnQ-5c-Rom"/>
                         <outlet property="randomButton" destination="cOE-L1-luq" id="PLQ-YK-Pam"/>
+                        <outlet property="resetButton" destination="Sud-W2-rSn" id="DMD-ft-p8L"/>
                         <outlet property="resultButton" destination="nrP-mT-6sK" id="uVp-aG-Zpi"/>
                         <outlet property="titleLabel" destination="VjI-4F-8kM" id="BK8-cr-AiP"/>
                         <outlet property="weightLabel" destination="0cZ-63-kzS" id="9td-gY-efL"/>
